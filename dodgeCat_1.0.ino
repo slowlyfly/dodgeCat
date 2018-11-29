@@ -77,13 +77,13 @@ void loop() {
   if ((reading - breading) > 3)
   // constrain the reading between our low and high mapping values
  {   unsigned int prox = constrain(reading, LOW_DIFF, HIGH_DIFF);
-    for (pos = 0; pos <= 50; pos += 1) { // goes from 0 degrees to 50 degrees  stretch out the hand
+    for (pos = 0; pos <= 50; pos += 1) { // goes from 0 degrees to 50 degrees    put out the cat hand
     // in steps of 1 degree
     myservo.write(pos);              // tell servo to go to position in variable 'pos'
     delay(6);                       // waits 6ms for the servo to reach the position
   }
     delay(50);                       // waits 15ms for the servo to reach the position
-  for (pos = 40; pos >= 0; pos -= 1) { // goes from 40 degrees to 0 degrees    draw back the hand
+  for (pos = 40; pos >= 0; pos -= 1) { // goes from 40 degrees to 0 degrees    draw back the cat hand
     myservo.write(pos);              // tell servo to go to position in variable 'pos'
     delay(10); 
   }
