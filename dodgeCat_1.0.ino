@@ -73,7 +73,7 @@ void loop() {
   // print out the reading value for debug
   Serial.println(reading); 
 
-  //if the hand approaching the sensor, the value changes, if the delta more than 3, than the hand draw back.
+  //if the human hand approaching the cat hand, the value of the proximity sensor changes, if the delta more than 3, than the cat hand draw back.
   if ((reading - breading) > 3)
   // constrain the reading between our low and high mapping values
  {   unsigned int prox = constrain(reading, LOW_DIFF, HIGH_DIFF);
